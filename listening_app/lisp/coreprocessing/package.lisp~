@@ -1,0 +1,4 @@
+;;;; package.lisp
+
+(defpackage #:coreprocessing
+  (:use #:cl #:cl-csv))

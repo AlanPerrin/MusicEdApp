@@ -1,0 +1,74 @@
+/* Global Styles */
+QWidget {
+    background-color: #F5F5F5; /* Light gray background */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333333; /* Dark gray text */
+}
+
+/* Headers */
+QLabel#header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333; /* Dark gray */
+    padding: 10px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #FFFFFF; /* White background */
+    border: 2px solid #DADADA; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333; /* Dark gray text */
+}
+
+QPushButton:hover {
+    background-color: #E0F7FA; /* Light blue hover background */
+    border: 2px solid #B2EBF2; /* Slightly darker border on hover */
+}
+
+QPushButton:pressed {
+    background-color: #B2EBF2; /* Darker blue when pressed */
+}
+
+/* Combo Box */
+QComboBox {
+    font-size: 16px;
+    font-family: Helvetica;
+}
+
+/* User Input */
+QLineEdit {
+    font-size: 16px;
+}
+
+/* Slider */
+QSlider::groove:horizontal {
+    border: 1px solid #B2EBF2; /* Light blue groove border */
+    background-color: #E0F7FA; /* Light blue groove background */
+    height: 8px;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background-color: #B2EBF2; /* Blue thumb */
+    border: 1px solid #81D4FA; /* Slightly darker border */
+    width: 16px;
+    height: 16px;
+    margin: -5px 0;
+    border-radius: 8px;
+}
+
+/* Align the content centrally */
+QWidget#centralwidget {
+    padding: 20px;
+    qproperty-alignment: AlignCenter;
+}
+
+/* Icons (if used in buttons or labels) */
+QPushButton::icon {
+    margin-right: 8px; /* Space between icon and text */
+}

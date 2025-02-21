@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.14)
+project(MyLanguageModelApp)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Tell CMake where to find your Qt installation (on the D drive).
+# Adjust the path if your Qt version or folder name differs.
+set(CMAKE_PREFIX_PATH "D:/Qt/6.8.2/mingw_64")
+
+# Find the Qt6 Widgets library.
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+
+# List your source files.
+set(SOURCES
+    src/main.cpp
+    src/InputWindow.cpp
+    src/HtmlWindow.cpp
+)
+
+set(HEADERS
+    src/InputWindow.h
+    src/HtmlWindow.h
+)
+
+add_executable(MyLanguageModelApp ${SOURCES} ${HEADERS})
+target_link_libraries(MyLanguageModelApp Qt6::Widgets)

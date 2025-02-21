@@ -1,0 +1,30 @@
+question,Center,Tonality,Sound,Difficulty
+Abmajor.svg,Ab,Major,Abmajor,1
+Amajor.svg,A,Major,Amajor,1
+Bbmajor.svg,Bb,Major,Bbmajor,1
+Cmajor.svg,C,Major,Cmajor,1
+Dmajor.svg,D,Major,Dmajor,1
+Ebmajor.svg,Eb,Major,Ebmajor,1
+Gmajor.svg,G,Major,Gmajor,1
+Aharmonicminor.svg,A,Harmonic-Minor,Aharmonicminor,2
+Amelodicminor.svg,A,Melodic-Minor,Amelodicminor,2
+Charmonicminor.svg,C,Harmonic-Minor,Charmonicminor,2
+Cmelodicminor.svg,C,Melodic-Minor,Cmelodicminor,2
+Dharmonicminr.svg,D,Harmonic-Minor,Dharmonicminr,2
+Dmelodicminor.svg,D,Melodic-Minor,Dmelodicminor,2
+Eharmonicminor.svg,E,Harmonic-Minor,Eharmonicminor,2
+Emelodicminor.svg,E,Melodic-Minor,Emelodicminor,2
+Gharmonicminor.svg,G,Harmonic-Minor,Gharmonicminor,2
+Gmelodicminor.svg,G,Melodic-Minor,Gmelodicminor,2
+cdor.svg,C,Dorian,cdor,3
+clyd.svg,C,Lydian,clyd,3
+Cmix.svg,C,Mixolydian,Cmix,3
+cphy.svg,C,Phygian ,cphy,3
+fdor.svg,F,Dorian,fdor,3
+flyd.svg,F,Lydian,Flyd,3
+fmix.svg,F,Mixolydian,fmix,3
+fphy.svg,F,Phygian ,fphy,3
+gdor.svg,G,Dorian,gdor,3
+glyd.svg,G,Lydian,glyd,3
+Gmix.svg,G,Mixolydian,Gmix,3
+gphy.svg,G,Phygian ,gphy,3

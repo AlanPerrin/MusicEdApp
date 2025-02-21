@@ -1,0 +1,10 @@
+release/main.o
+release/MainPage.o
+release/InputWindow.o
+release/HtmlWindow.o
+release/NoteWindow.o
+release/qrc_resources.o
+release/moc_MainPage.o
+release/moc_InputWindow.o
+release/moc_HtmlWindow.o
+release/moc_NoteWindow.o

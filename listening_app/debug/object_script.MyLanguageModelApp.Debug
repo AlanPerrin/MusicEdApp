@@ -1,0 +1,10 @@
+debug/main.o
+debug/MainPage.o
+debug/InputWindow.o
+debug/HtmlWindow.o
+debug/NoteWindow.o
+debug/qrc_resources.o
+debug/moc_MainPage.o
+debug/moc_InputWindow.o
+debug/moc_HtmlWindow.o
+debug/moc_NoteWindow.o

@@ -1,0 +1,37 @@
+question,answer,RomanNum,Sound,Difficulty
+CI.svg,C,I,CI,1
+CIb.svg,C / E,Ib,Cib,3
+CIc.svg,C / G,Ic,Cic,3
+Evi.svg,Em,vi,Evi,1
+Evib.svg,Em /G,vib,Evib,3
+Evic.svg,Em /B,vic,Evic,3
+FIV.svg,F,IV,FIV,1
+FIVb.svg,F /A#,IV,FIVb,3
+FIVc.svg,F /C,IV,FIVc,3
+AV.svg,A,V,AV,1
+AVb.svg,A / C,Vb,Avb,3
+AVc.svg,A /E,Vc,Avc,3
+BbI.svg,Bb,I,BbI,1
+BbIb.svg,Bb / D,Ib,BbIb,3
+BbIc.svg,Bb / F,Ic,BbIc,3
+Cii.svg,Cm,ii,Cii,1
+Ciib.svg,Cm / Eb,iib ,Ciib,3
+Ciic.svg,Cm / G,iic,Ciic,3
+Diii.svg,Dm ,iii,Diii,1
+Diiib.svg,Dm / F,iiib,Diiib,3
+Diiic.svg,Dm /A,iiic,Diiic,3
+DIV.svg,D,IV,DIV,1
+DIVb.svg,D / F#,IVb,DIVb,3
+DIVc.svg,D / A,IV c,DIVc,3
+EV.svg,E,V,EV,1
+EVb.svg,E / G#,Vb,Evb,3
+EVc.svg,E / B,Vc,Evc,3
+Fii.svg,Fm,ii,Fii,1
+Fiib.svg,Fm / A,iib ,Fiib,3
+Fiic.svg,Fm / C,iic,Fiic,3
+GIV.svg,G,IV,GIV,1
+GIVb.svg,G / B,IVb,GIVb,3
+GIVc.svg,G / D,IVc,GIVc,3
+Gvi.svg,Gm ,vi,Gvi,1
+Gvib.svg,Gm /Bb,vib,Gvib,3
+Gvic.svg,Gm /D,vic,Gvic,3

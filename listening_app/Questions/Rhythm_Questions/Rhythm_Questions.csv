@@ -1,0 +1,21 @@
+question,answer,Rhythm Selection,Sound,Difficulty
+Q06.svg,"dottedcrotchet, quaver","dottedcrotchet, quaver, minim",Q06(rhythm),1
+Q07.svg,"quaver, quaver","quaver, quaver, crotchet, crotchet",Q07(rhythm),1
+Q08.svg,"quaver,dottedcrotchet","quaver,dottedcrotchet, quaver, crotchet",Q08(rhythm),1
+Q09.svg,"dottedcrotchet, quaver","dottedcrotchet, quaver, crotchet, quaver",Q09(rhythm),1
+Q10.svg,"quaver,dottedcrotchet","quaver,dottedcrotchet, minim, crotchet",Q10(rhythm),1
+Q11.svg,"quaver,quaver,minim","quaver,quaver,minim,crotchet,dottedcrotchet",Q11(rhythm),2
+Q12.svg,"quaver,quaver,crotchet","quaver,quaver,crotchet, minim, crotchet",Q12(rhythm),2
+Q13.svg,"crotchet,dottedcrotchet,quaver","crotchet,dottedcrotchet,quaver, minim, crotchet",Q13(rhythm),2
+Q14.svg,"quaver,quaver,crotchet","quaver,quaver,crotchet, dottedcrotchet,minim",Q14(rhythm),2
+Q15.svg,"semiquaver,semiquaver,quaver","semiquaver,semiquaver,quaver,quaver, crotchet",Q15(rhythm),2
+Q16.svg,"quaver,quaver, crotchet,crotchet","quaver,quaver, crotchet,crotchet, dottedquaver, dottedcrotchet, minim",Q16(rhythm),3
+Q17.svg,"quaver,quaver, dottedcrotchet,quaver","quaver,quaver, dottedcrotchet,quaver, minim, dottedquaver, semiquaver",Q17(rhythm),3
+Q18.svg,"dottedquaver,semiquaver,quaver,quaver","dottedquaver,semiquaver,quaver,quaver, semiquaver, crotchet",Q18(rhythm),3
+Q19.svg,"crotchet,quaver,crotchet,crotchet","crotchet,quaver,crotchet,crotchet, minim, semibreve",Q19(rhythm),3
+Q20.svg,"dottedquaver,semiquaver,quaver,quaver","dottedquaver,semiquaver,quaver,quaver, semiquaver, crotchet",Q20(rhythm),3
+Q21.svg,"quaver,quaver,dottedquaver,semiquaver,quaver","quaver,quaver,dottedquaver,semiquaver,quaver, dottedcrotchet, minim",Q21(rhythm),3
+Q22.svg,"quaver,semiquaver,semiquaver,quaver,quaver","quaver,semiquaver,semiquaver,quaver,quaver, dottedquaver, dottedchrotchet",Q22(rhythm),3
+Q23.svg,"dottedcrotchet,quaver,crotchet, crotchet,crotchet","dottedcrotchet,quaver,crotchet, crotchet,crotchet, minim, semiquaver",Q23(rhythm),3
+Q24.svg,"quaver,quaver, quaverrest,quaver,crotchet,crotchet","quaver,quaver, quaverrest,quaver,crotchet,crotchet, minim, semibreve",Q24(rhythm),3
+Q25.svg,"crotchet,crotchet,quaver,quaver,quaver","crotchet,crotchet,quaver,quaver,quaver, dottedcrotchet, semiquaver",Q25(rhythm),3

@@ -1,0 +1,31 @@
+Question,Center,Tonality,Difficulty
+C.svg,C,major,1
+C.svg,A,minor,3
+G.svg,G,major,1
+G.svg,E,minor,3
+D.svg,D,major,1
+D.svg,B,minor,3
+A.svg,A,major,1
+A.svg,F#,minor,3
+E.svg,E,major,1
+E.svg,C#,minor,3
+B.svg,B,major,2
+B.svg,G#,minor,3
+F#.svg,F#,major,2
+F#.svg,D#,minor,3
+C#.svg,C#,major,2
+C#.svg,A#,minor,3
+F.svg,F#,major,1
+F.svg,D,minor,3
+Bb.svg,Bb ,major,1
+Bb.svg,G,minor,3
+Eb.svg,Eb,major,1
+Eb.svg,C,minor,3
+Ab.svg,Ab,major,1
+Ab.svg,F,minor,3
+Db.svg,Db,major,2
+Db.svg,Bb ,minor,3
+Gb.svg,Gb,major,2
+Gb.svg,Eb,minor,3
+Cb.svg,Cb,major,2
+Cb.svg,Ab,minor,3
