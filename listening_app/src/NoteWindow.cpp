@@ -5,6 +5,7 @@
 #include <QTextStream>
 #include <QRandomGenerator>
 #include <QTimer>
+#include <QProcess>
 #include <QDebug>
 
 // ---- CustomDialog Implementation ----
@@ -62,6 +63,12 @@ void NoteWindow::setupUI() {
     progressBar->setMaximum(3);  // Placeholder for question count
     layout->addWidget(progressBar);
 
+     // Add labels for answer and sound
+     answerLabel = new QLabel(this);
+     layout->addWidget(answerLabel);
+     soundLabel = new QLabel(this);
+     layout->addWidget(soundLabel);
+
     // Question Label and Play Button (Horizontal Layout)
     QWidget *questionPanel = new QWidget(this); // Widget to hold label and button
     QHBoxLayout *questionLayout = new QHBoxLayout(questionPanel);
@@ -101,29 +108,58 @@ void NoteWindow::setupUI() {
 
 }
 
-void NoteWindow::loadQuestion() {
-    QFile file("questions.csv");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-        return;
+ void NoteWindow::loadQuestion() {
+//     QFile file("questions.csv");
+//     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+//         return;
 
-    QTextStream in(&file);
-    QStringList questions;
-    while (!in.atEnd()) {
-        questions.append(in.readLine());
+//     QTextStream in(&file);
+//     QStringList questions;
+//     while (!in.atEnd()) {
+//         questions.append(in.readLine());
+//     }
+//     file.close();
+
+//     if (!questions.isEmpty()) {
+//         int randIndex = QRandomGenerator::global()->bounded(questions.size());
+//         QStringList data = questions[randIndex].split(",");
+//         correctAnswer = data[1];
+
+//         // Load SVG
+//         //QString svgPath = "Questions/Note_Questions/" + data[0];
+//         //scene->clear();
+//         //svgItem = new QGraphicsSvgItem(svgPath);
+//         svgItem->setScale(2);
+//         scene->addItem(svgItem);
+//     }
+ }
+
+void NoteWindow::handleSubmit() {
+    QString inputText = QString::number(m_level); // Get the level as input
+
+    QProcess process;
+    QString program = "py"; // Or the full path to your python executable
+    QStringList arguments;
+    arguments << "C:/Users/guita/OneDrive/Desktop/Test-App/updates/listening_app/python/openquestions.py" << m_level;
+
+    process.start(program, arguments);
+
+    if (!process.waitForFinished(-1)) {
+        qDebug() << "Error: Python process did not finish:" << process.errorString();
+        //... (Error handling)
     }
-    file.close();
 
-    if (!questions.isEmpty()) {
-        int randIndex = QRandomGenerator::global()->bounded(questions.size());
-        QStringList data = questions[randIndex].split(",");
-        correctAnswer = data[1];
+    QString output = QString::fromLocal8Bit(process.readAllStandardOutput());
+    QStringList outputParts = output.split("\n");
 
-        // Load SVG
-        QString svgPath = "Questions/Note_Questions/" + data[0];
-        scene->clear();
-        svgItem = new QGraphicsSvgItem(svgPath);
-        svgItem->setScale(2);
-        scene->addItem(svgItem);
+    if (outputParts.size() == 3) {
+        QString answer = outputParts;
+        QString svgPath = outputParts;
+        QString sound = outputParts;
+
+        updateGUIWithPythonData(answer, svgPath, sound);
+    } else {
+        //... (Error handling)
     }
 }
 
@@ -210,4 +246,15 @@ void NoteWindow::submit() {
 void NoteWindow::showFeedbackDialog(bool isCorrect, QString correctAnswer) {
     CustomDialog *dlg = new CustomDialog(this, isCorrect, correctAnswer);
     dlg->exec();
+}
+
+void NoteWindow::updateGUIWithPythonData(const QString& answer, const QString& svg, const QString& sound) {
+    answerLabel->setText("Answer: " + answer);
+    soundLabel->setText("Sound: " + sound);
+
+    // Load SVG (replace existing SVG loading code in loadQuestion() with this)
+    scene->clear();
+    svgItem = new QGraphicsSvgItem(svg); // Use the svg path from Python
+    svgItem->setScale(2);
+    scene->addItem(svgItem);
 }

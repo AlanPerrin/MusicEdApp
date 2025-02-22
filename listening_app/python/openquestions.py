@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import ast
+import json
 import startlisp as CL
 
 def parse_lisp_data(lisp_string):
@@ -28,10 +29,19 @@ def main():
         # Call the Lisp function and handle potential errors   
         questions = get_note_questions(int( input_text))
         data = ast.literal_eval(questions)
-        print("Note Questions:")
-        print(data)
-        print("\n")
-        print("Type:", type(data))
+        
+        #extracting data
+        answer = data[1][1][1]
+        svg= data[1][0][1]
+        sound = f"{data[1][2][1]}.mp3"
+
+        result = {
+            "answer": answer,
+            "svg": svg,
+            "sound": sound
+        }
+        json_string = json.dumps(result)
+
     except Exception as e:
         print(f"Error calling Lisp function: {e}")
         sys.exit(1)

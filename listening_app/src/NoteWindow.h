@@ -33,6 +33,8 @@ private slots:
     void keyPressed();
     void removeLastPressed();
     void submit();
+    void updateGUIWithPythonData(const QString& answer, const QString& svg, const QString& sound); // New slot
+    void handleSubmit(); // Add the declaration here
 
 private:
     void setupUI();
@@ -57,6 +59,8 @@ private:
     // New member variables.
     QString m_username;
     int m_level;
+    QLabel *answerLabel;  // New label to display the answer
+    QLabel *soundLabel;  // New label to display the sound
 };
 
 #endif // NOTE_WINDOW_H
