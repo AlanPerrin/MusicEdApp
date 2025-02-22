@@ -37,14 +37,13 @@ void InputWindow::handleSubmit() {
     QString compiledPython = "C:/Users/guita/OneDrive/Desktop/Test-App/updates/listening_app/python/python_bridge_executable.exe";
     QString pythonScript = "C:/Users/guita/OneDrive/Desktop/Test-App/updates/listening_app/python/python_bridge.py";
 
-
     if (QFile::exists(compiledPython)) {
         program = compiledPython;
         qDebug() << "Using compiled Python executable:" << program;
     } else {
         program = "py";  // or "python3" if needed
         // Prepend the script path so that the final arguments are: [script, inputText]
-        arguments.prepend(pythonScript);
+        arguments << pythonScript << inputText; 
         qDebug() << "Using Python script via system Python:" << program << arguments;
     }
 

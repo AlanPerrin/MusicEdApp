@@ -4,6 +4,13 @@ import startlisp as CL
 
 
 def main():
+    #if len(sys.argv) < 2:
+    #    print("Usage: simplified_bridge.py \"your input text\"", file=sys.stderr)
+    #    sys.exit(1)
+
+   # input_text = sys.argv[1]
+    #print(f"Received: {input_text}")  # Just print the input
+    
     # Parse input from command-line arguments.
     if len(sys.argv) < 2:
         print("Usage: python_bridge.py \"your input text\" [--dev]")
@@ -18,6 +25,7 @@ def main():
     html_out = lisp.function("coreprocessing::html-out")
     result = html_out(input_text)
     print(result)
+
     # Retrieve all needed Lisp functions.
     #language_model_response = lisp.function("coreprocessing::language-model-response")
     #generate_html_string     = lisp.function("coreprocessing::generate-html-string")
