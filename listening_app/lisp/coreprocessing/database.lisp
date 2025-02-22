@@ -35,4 +35,7 @@ Returns a list of lists representing the questions."
 
 
 (defun string-questions (level)
-		  (format nil "~a"  level))
+  (format nil "~a"  (load-note-questions level)))
+
+(defun notes-json (level)
+  (jonathan:to-json (load-note-questions level)))

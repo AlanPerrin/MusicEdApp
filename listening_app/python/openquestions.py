@@ -1,29 +1,37 @@
 #!/usr/bin/env python3
 import sys
+import ast
 import startlisp as CL
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: openquestions.py \"your input text\" [--dev]")
-        sys.exit(1)
-
-    # Initialize Lisp and get the Lisp instance.
-    lisp = CL.initialize_lisp()
-
-    # Retrieve the Lisp function.
-    get_note_questions = lisp.function("string-questions")  # More descriptive name
-
-
-
+def parse_lisp_data(lisp_string):
+    """Parses Lisp-style data into a Python list of lists."""
     try:
-        # Call the Lisp function and handle potential errors
-        
-        questions = get_note_questions(1)
-        #questions = hello()
+        # Use ast.literal_eval for safe evaluation of Lisp structure
+        data = ast.literal_eval(lisp_string)
+        return data
+    except (SyntaxError, ValueError) as e:
+        print(f"Error parsing Lisp data: {e}", file=sys.stderr)  # Print to stderr for C++ to capture
+        return None
+
+def main():
+    # Parse input from command-line arguments.
+    if len(sys.argv) < 2:
+        print("Usage: python_bridge.py \"your input text\" [--dev]")
+        sys.exit(1)
+    # The first argument is the input text.
+    input_text = sys.argv[1]
+    # Initialize Lisp and load your Lisp code.
+    lisp = CL.initialize_lisp()
+    # Retrieve the Lisp function.
+    get_note_questions = lisp.function("coreprocessing::notes-json")  # More descriptive name  
+    try:
+        # Call the Lisp function and handle potential errors   
+        questions = get_note_questions(int( input_text))
+        data = ast.literal_eval(questions)
         print("Note Questions:")
-        print(questions)
+        print(data)
         print("\n")
-        print("Type:", type(questions))
+        print("Type:", type(data))
     except Exception as e:
         print(f"Error calling Lisp function: {e}")
         sys.exit(1)
